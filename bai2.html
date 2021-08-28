@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Kiểm tra số lượng phần tử</h1>
+<!--Bài 2:-->
+<!--Cho trước 1 mảng n phần tử-->
+
+<!--Viết hàm cho phép đếm xem có bao nhiêu phần tử a ( a được nhập vào tử bàn phím)-->
+<!--<div>-->
+<!--    <input id="vle" type="text"/>-->
+<!--    <button id="btn" onclick="checkQuantity()">Search</button>-->
+<!--</div>-->
+<!--result: <p id="result"></p>-->
+<script>
+    let n = [1, 2, 3, 4, 5, 4, 7, 4, 9]
+
+    function checkQuantity() {
+        let element = parseInt(prompt("nhap"))
+        let count = 0;
+        // for (let i in n){
+        for (let i = 0; i < n.length; i++) {
+            if (n[i] === element) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    let arr = [];
+    document.write("so lương phần tử đã nhập có trong mảng: " + checkQuantity(arr))
+</script>
+</body>
+</html>
