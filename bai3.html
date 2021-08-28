@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 3:-->
+<!--Cho trước 1 mảng bao gồm n phần tử-->
+<!--Viết hàm tính tổng các số nguyên tố trong mảng.-->
+<script>
+    let arr = [1, 2, 3, 4, 5, 6, 7, 11,13]
+
+    document.write("Total of prime ns in the array is: " + totalPrime(arr))
+
+
+    function isPrime(n) { //kiểm tra số nguyên tố{
+        for (let i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i === 0) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function totalPrime(arr) { //tính tổng các số nguyên tố
+        let total = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (isPrime(arr[i]) === false) {
+                total += parseInt(arr[i]);
+            }
+        }
+        return total-1;
+    }
+
+    // --------------------------
+    //
+    //
+    //     // tính tổng các số nguyên tố trong mảng
+    //     for (let i = 0; i < arrayNumber.length; i++){
+    //         if (check(arrayNumber[i])){
+    //             total += arrayNumber[i];
+    //         }
+    //     }
+    //     document.write("Tổng của các số nguyên tố trong mảng là: " + total);
+</script>
+</body>
+</html>
