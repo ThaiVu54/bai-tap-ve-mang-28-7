@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Bài 1:-->
+<!--Cho trước 1 mảng n phần tử-->
+<!--Viết hàm đếm in ra số lượng các số chẵn trong mảng-->
+<script>
+    let n = [1, 2, 4, 6, 5, 9, 0, 7]
+
+    function evenNumber() {
+        let count = 0;
+        // for (let i in n) {
+        for (let i = 0; i < n.length; i++) {
+            if (n[i] % 2 === 0) {
+                count++;
+            }
+        }
+        return count;
+    }
+
+    let arr = []
+    document.write("Số lượng phần tử các số chẵn có trong mảng la: "+evenNumber(arr))
+
+</script>
+</body>
+</html>
